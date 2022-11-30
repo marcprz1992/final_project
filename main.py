@@ -27,43 +27,36 @@ import matplotlib.pyplot as mp
 
 
 st.set_page_config(
-    page_title="Welcome to my final project!",
+    page_title="UK Supermarket Analysis",
     page_icon="👋")
 
 cover = Image.open("../final_project/tesco_logo.png")
 st.image(cover, use_column_width=True)
 
 #st.markdown("# Main page")
-st.sidebar.markdown("# Main page")
+#st.sidebar.markdown("# Main page")
 
 
 
-st.title('Deeep dive from Tesco')
-st.header("General information")
-
-#query = f"""SELECT Category, COUNT(product_id) as 'Number of products' 
-    #FROM final_project_ironhack.main_product_info
-    #GROUP BY Category
-    #ORDER BY COUNT(product_id) DESC;"""
-#df = pd.read_sql_query(query, engine)
-
-st.dataframe(secuel.get_product_counts_by_category ())
-
-option1 = st.selectbox(
-    'Please choose a category:',
-    ('Fresh', 'Household', 'Petcare'))
-
-st.dataframe(secuel.get_subcategory_counts_by_given_category (option1))
+st.title('Welcome to my final project')
+st.header("Introduction & objectives")
+st.write("The main goal for this project has been to test everything I have learned over the last couple of months as part of the Data Analytics bootcamp.")
+st.write("Therefore, and given my previous background in Fast Moving Consumer Gooods (FMCG), I thought it would be a great idea to _**have a dashboard that would easily help me (a consumer/user) get all the public information across the British supermarkets**_ in order to decide whether I should buy a given product/category/brand in a supermarket or another.")
+st.write("Given the main goal above, the objectives for this project are:")
+st.write("1) Start with Tesco (UK market leader) as the first component of this dashboard to test whether it works as expected.")
+st.write("2) Web scraping from Tesco's website so I could get:")
+st.write("a) Product name, price, category, promotions, etc.")
+st.write("b) GDA (Guideline Daily Amounts) information & product reviews given by customers, where applicable.")
+st.write("c) Sentiment Analysis of a given product/category/brand")
+st.write("3) Deep dive analysis of Tesco's brands, categories & subcategories within different scenarios: stock issues, promotions, innovation, etc.")
 
 
+st.header("Let's jump into the different sections to see what the data gathered looks like!")
 
-st.header("First chart:")
 
-q1 = secuel.get_product_counts_by_category ()
-fig1 = px.bar(q1, x="Category", y="Number of products",title="Number of products by category",color="Category")
-st.plotly_chart(fig1, use_container_width=True)
+st.header("Conclusions & next steps")
 
-q43 = secuel.get_key_category_info()
-fig43 = px.scatter(q43, x="Subcategory", y="Total Number of products",color="Category",
-                 title="Number of products by subcategory",size="Total Number of products")
-st.plotly_chart(fig43, use_container_width=True) 
+st.write("Now that we can see the analysis for Tesco works, the idea would be to do the following:")
+st.write("1) Extend the analysis to the key British supermarket chains in order to get a comparison by category/brand.")
+st.write("2) Weekly update of this analysis so historical data can be gathered as well as price predictions can be calculated given this historical.")
+# Choose Tesco (UK market leader) as the first component of this dashboard to test whether it works as expected.")

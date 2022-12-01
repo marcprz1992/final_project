@@ -28,7 +28,7 @@ import matplotlib.pyplot as mp
 
 st.set_page_config(
     page_title="UK Supermarket Analysis",
-    page_icon="👋")
+    page_icon="🛒")
 
 cover = Image.open("../final_project/tesco_logo.png")
 st.image(cover, use_column_width=True)
@@ -54,10 +54,10 @@ st.write("3) Deep dive analysis of Tesco's brands, categories & subcategories wi
 st.header("Let's jump into the different sections to see what the data gathered looks like!")
 
 
-st.header("Conclusions & next steps")
+st.header("Conclusions & Next Steps")
 
-st.write("Now that we can see the analysis for Tesco works, the idea would be to do the following:")
+st.write("Now that we can see the analysis for Tesco works and that you can get different insights depending on the information you select, the idea would be to do the following:")
 st.write("1) Extend the analysis to the key British supermarket chains in order to get a comparison by category/brand.")
-st.write("2) Weekly update of this analysis so historical data can be gathered as well as price predictions can be calculated given this historical.")
-st.write("3) Add GDA (aka nutritional values of the products) to the analysis to get a better understanding of how much these relate to price & promotions.")
+st.write("2) Weekly update of this analysis so historical data can be gathered as well as price predictions can be calculated given the historical.")
+st.write("3) Add GDA (aka nutritional values of the products) to the analysis to get a better understanding of how much these relate to price & promotions and what impact the new HFSS (High in Fat, Salt & Sugar) legislation on food products is going to have across the market.")
 # Choose Tesco (UK market leader) as the first component of this dashboard to test whether it works as expected.")

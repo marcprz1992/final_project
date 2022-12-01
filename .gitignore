@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Streamlit folder
+.streamlit 
+.sql_queries

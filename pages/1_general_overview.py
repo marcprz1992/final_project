@@ -64,7 +64,7 @@ option1 = st.selectbox(
  'bakery'])
 
 q3 = secuel.get_subcategory_counts_by_given_category(option1)
-fig3 = px.bar(q3, x="Subcategory", y="Number of products",title="Number of products within each subcategory")
+fig3 = px.bar(q3, x="Subcategory", y="Number of products",title=f"Number of products within each <b>{option1}</b> subcategory")
 st.plotly_chart(fig3, use_container_width=True)
 
 st.write("You can also filter by the subcategory you are most interested in")
@@ -96,12 +96,38 @@ option1A = st.selectbox(
 
 
 q14 = secuel.get_avg_price_for_all_subcategories(option1A)
-fig14 = px.bar(q14, x="Subcategory", y="Average Price",title="Average Price across subcategories",color="Subcategory")
+fig14 = px.bar(q14, x="Subcategory", y="Average Price",title=f"Average Price across <b>{option1A}</b> subcategories",color="Subcategory")
 st.plotly_chart(fig14, use_container_width=True)
 
 option1B = st.selectbox("Please choose a subcategory to get the price details for the brands underneath:", (secuel.get_subcategory_counts_by_given_category (option1A)))
 
 q14A = secuel.get_avg_price_for_all_brands(option1B)
-fig14A = px.bar(q14A, x="Brand", y="Average Price",title="Average Price across Brands",color="Average Price")
+fig14A = px.bar(q14A, x="Brand", y="Average Price",title=f"Average Price across Brands within <b>{option1B}</b>",color="Average Price")
 st.plotly_chart(fig14A, use_container_width=True)
+
+
+
+st.header("3) Manufacturers location")
+
+st.write("If you are interested in seeing whereabouts the country the key manufacturers for each category are located in, you can use the filter below.")
+
+st.write("To look at where the manufacturers for a given category are located, please do provide a category below.")
+option16 = st.selectbox(
+    'Please choose a category for location:',
+    ['food cupboard',
+ 'home and ents',
+ 'health and beauty',
+ 'fresh food',
+ 'drinks',
+ 'household',
+ 'frozen food',
+ 'baby',
+ 'petcare',
+ 'bakery'])
+
+
+
+q114 = secuel.get_postcodes_by_given_category(option16)
+#st.dataframe(q114)
+st.map(q114) 
 

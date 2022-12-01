@@ -74,7 +74,7 @@ fig48B = px.bar(
     opacity = 0.9,
     orientation = "v",
     barmode = 'stack',
-    title='Distribution of innovation vs. rest of range by subcategory')
+    title=f'Distribution of innovation vs. rest of range by subcategory within <b>{option4A}</b>')
 st.plotly_chart(fig48B, use_container_width=True)
 
 st.write("You can also filter by the subcategory you are most interested in to see what new & exciting innovation is happening there.")

@@ -70,7 +70,7 @@ fig38A = px.bar(
     opacity = 0.9,
     orientation = "v",
     barmode = 'stack',
-    title='Number of products in stock vs. not by subcategory')
+    title=f'Number of products in stock vs. not by subcategory within <b>{option3A}</b>')
 st.plotly_chart(fig38A, use_container_width=True)
 
 st.write("You can also filter by the subcategory you are most interested in to see what products are currently out of stock")

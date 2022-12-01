@@ -91,7 +91,7 @@ fig28B = px.bar(
     opacity = 0.9,
     orientation = "v",
     barmode = 'stack',
-    title='Number of products in promo vs. not by subcategory')
+    title=f'Number of products in promo vs. not by subcategory within <b>{option2A}</b>')
 st.plotly_chart(fig28B, use_container_width=True)
 
 st.write("You can also filter by the subcategory you are most interested in to see what products are currently on promotion")

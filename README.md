@@ -1,6 +1,6 @@
 # Final Project: UK Supermarket Analysis
 
-![Alt text](tesco_logo.png)
+![Alt text](visualisations/tesco_logo.png)
 ### Objectives
 
 The main goal for this project has been to test everything I have learned over the last couple of months as part of the Data Analytics bootcamp.
@@ -22,11 +22,9 @@ Given the main goal above, the objectives for this project are:
 
 The following screenshots have been taken from the Streamlit app to show how it actually looks:
 
-![Alt text](streamlit_image3.PNG)
-
-![Alt text](streamlit_image1.PNG)
-
-![Alt text](streamlit_image2.PNG)
+![Alt text](visualisations/streamlit_image3.PNG)
+![Alt text](visualisations/streamlit_image1.PNG)
+![Alt text](visualisations/streamlit_image2.PNG)
 
 ### Key steps taken for this project
 
